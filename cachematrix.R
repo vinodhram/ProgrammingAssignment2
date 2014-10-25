@@ -1,3 +1,4 @@
+## makeCacheMatrix
 ## Inverse of matrix cache
 ## Creates a special matrix object that can cache its inverse
 makeCacheMatrix <- function( m = matrix() ) {
@@ -37,6 +38,7 @@ makeCacheMatrix <- function( m = matrix() ) {
 ## Compute the inverse of the special matrix returned by "makeCacheMatrix"
 ## above. If the inverse has already been calculated (and the matrix has not
 ## changed), then the "cachesolve" should retrieve the inverse from the cache.
+## Cachesolve
 cacheSolve <- function(x, ...) {
 
     ## Return a matrix that is the inverse of 'x'
@@ -44,7 +46,7 @@ cacheSolve <- function(x, ...) {
 
     ## Just return the inverse if its already set
     if( !is.null(m) ) {
-            message("getting cached data")
+            message("cache data is captured")
             return(m)
     }
 
